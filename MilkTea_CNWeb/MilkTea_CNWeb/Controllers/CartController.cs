@@ -52,6 +52,7 @@ namespace MilkTea_CNWeb.Controllers
         }
         public ActionResult XoaSanPham(int id)
         {
+        //Xin chao cac ban
             var cart = (Cart)Session[strCart];
             var sp = db.SanPhams.Find(id);
             cart.XoaSanPham(sp);
