@@ -1,0 +1,171 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/TemplateTraSua/css/firstPage.css" rel="stylesheet" />
+
+
+
+
+    <script src="~/Scripts/all.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+   
+
+
+
+    <!-- jQuery library -->
+    <!-- Popper JS -->
+
+
+    @RenderSection("css", false)
+    <title>Document</title>
+</head>
+<body>
+ 
+    <header class="menu">
+        <div class="menu-list">
+            <ul>
+                <li><a href="/Home/Index">Home</a></li>
+                <li><a href="/Home/ShopAll">Milk Tea</a></li>
+                <li><a href="/Home/ShopAllforVIP">MilkTea for VIP</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+        <label class="brand">Bumba Milk Tea</label>
+        <div class="menu-social">
+            <div class="icon">
+                @{
+                    string url = HttpContext.Current.Request.Url.AbsolutePath;
+                    if (url.Contains("Admin"))
+                    {
+
+                    }
+                    else
+                    {
+                        @Html.Action("TestChildView", "Cart")
+                      
+                    }
+                }
+
+
+
+
+                <ul id="childMenu">
+                    <li><a href="/Login/DangNhap">Đăng nhập</a></li>
+                    @{
+                        if (Session[MilkTea_CNWeb.Controllers.LoginController.strLogin] != null)
+                        {
+                            <li><a href="/Login/DangXuat" style="font-size:15px">Đăng Xuất</a></li>
+                            <li><a href="/Home/GetThongTinKH" style="font-size:15px">Thông tin cá nhân</a></li>
+                        }
+                        if (Session[MilkTea_CNWeb.Controllers.LoginController.strLoginNV] != null)
+                        {
+                            <li><a href="/Admin/AdminHome" style="font-size:15px">Admin</a></li>
+                            }
+                        }
+                        </ul>
+                        
+
+                <script>
+                    $('#childMenu').hide();
+
+                    $('#userIcon').hover(function () {
+                        $('#childMenu').show();
+                    });
+                    $('#childMenu').mouseleave(function () {
+                        $('#childMenu').hide();
+                    });
+
+                </script>
+
+
+
+
+            </div>
+        </div>
+    </header>
+    @RenderBody()
+    <footer style="margin-top: 50px;">
+        <hr style="border: 1.5px solid gainsboro;width: 75%;margin: auto;">
+        <div class="footer-content">
+            <div class="footer-content-1">
+                <div class="footer-content-1-col1">
+                    <br>
+                    <br>
+                    <Span>Get to Know</Span>
+                    <br>
+                    <span>Bumba's Milk Tea Better</span>
+                </div>
+                <div class="footer-content-1-col2">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <span>Help</span>
+                    <hr>
+                </div>
+                <div class="footer-content-1-col2">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <span>Follow Us</span>
+                    <hr>
+                </div>
+            </div>
+            <div class="footer-content-2">
+                <div class="menu-list-2">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Milk Tea</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="menu-list-3">
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping & Returns </a></li>
+                        <li><a href="#">Store Policy</a></li>
+                        <li><a href="#">Payment Methods </a></li>
+
+                    </ul>
+                </div>
+                <div class="menu-list-3">
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-content-3">
+                <div class="phone">
+                    <a href="#">Visit Our Stores</a>
+                    <br>
+                    <span>Customer service: 123-456-7890</span>
+                </div>
+                <div class="email-box">
+                    <input class="thisEmail" type="text" placeholder="Enter your email here*.. ">
+                    <button>Subcribe now</button>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+  
+   
+    @RenderSection("scripts", required: false)
+</body>
+</html>

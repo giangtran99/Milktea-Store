@@ -1,0 +1,93 @@
+/* CSS cho ShopAll */
+.AvaTraSua {
+    width: 200px;
+    height: 230px;
+    border-radius: 20px;
+    z-index: 1;
+    margin-top:100px;
+}
+
+#banner {
+    margin-top: 80px;
+    width: 100%;
+}
+
+a :hover {
+    opacity: 0.8;
+}
+
+.TraSualbl {
+    font-size: 20px;
+    color: black;
+    text-align:center;
+    margin-top:50px;
+}
+
+#Filterbtn {
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-table;
+}
+
+#FilterMenu {
+    font-size: 20px;
+    font-style: italic;
+    margin-left: 50px;
+    float: left;
+    width: 20%;
+    margin-top: 100px;
+}
+
+#list-Products {
+    float: left;
+    width: 70%;
+}
+
+li {
+    list-style-type: none;
+}
+
+label {
+    color: #ffdd99;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#FilterOp > ul > li > a {
+    text-decoration: none;
+    color: black;
+}
+
+.ChiTiet {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    background-color: #ffffcc;
+    box-shadow: 0 0 10px #FF6037;
+    margin-left:50px;
+}
+
+    .ChiTiet :hover {
+        opacity: 0.1;
+    }
+
+#FilterOp > ul > li > a:hover {
+    color: gray;
+}
+
+#Products {
+    display: table;
+    clear: both;
+    width: 100%;
+}
+
+#list-Products > ul > li {
+    display: inline-table;
+}
+
+#Products > ul {
+    margin-left: 50px;
+}
+
+.TraSua {
+    margin-left: 50px;
+}

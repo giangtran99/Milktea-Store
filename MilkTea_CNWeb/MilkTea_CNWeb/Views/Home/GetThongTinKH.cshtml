@@ -1,0 +1,51 @@
+﻿@using MilkTea_CNWeb.Models
+@model KhachHang
+@{
+    ViewBag.Title = "GetThongTinKH";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section css{
+
+    <link href="~/TemplateTraSua/css/styleFormKH.css" rel="stylesheet" />
+}
+
+@section scripts{
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+}
+<main style="margin-top: 100px;">
+    <div id="title">
+        <label>THÔNG TIN KHÁCH HÀNG</label>
+    </div>
+    <div class="container">
+        <form action="/Home/SuaThongTinKH">
+
+
+            <label for="TenDangNhap">Tài khoản</label>
+            <input type="text" id="tk" name="TenDangNhap" value="@Model.TenDangNhap">
+
+            <label for="MatKhau">Mật khẩu</label>
+            <input type="password" id="mk" name="MatKhau" value="@Model.MatKhau">
+
+            <label for="HoTen">Họ Và Tên</label>
+            <input aria-invalid="true" type="text" id="ten" name="HoTen" value="@Model.HoTen">
+
+            <label for="Diachi">Địa chỉ</label>
+            <input type="text" id="dc" name="Diachi" value="@Model.Diachi">
+
+            <label for="SDT">Số Điện Thoại</label>
+            <input type="text" id="sdt" name="SDT" value="@Model.SDT">
+
+            <label for="Email">Email</label>
+            <input type="email" id="email" name="Email" value="@Model.Email">
+
+            <label for="Email">Loại Khách Hàng</label>
+            <input type="email" id="email" name="Email" value="@Model.LoaiKH" disabled>
+
+            <button id="btnXacNhan" type="submit">Cập Nhật</button>
+
+        </form>
+
+
+    </div>
+</main>

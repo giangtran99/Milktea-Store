@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewBag.Title = "ShopDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section scripts{
+    <script src="~/TemplateTraSua/js/jqueryShopDetail.js"></script>
+}
+@section css{
+    <link href="~/TemplateTraSua/css/styleDetail.css" rel="stylesheet" />
+    <style>
+        #selectSoLuong {
+            font-size: 20px;
+            margin-left:51px;
+            margin-top:10px
+
+        }
+        #selectSize{
+            margin-top:10px;
+            margin-left:45px;
+        }
+    </style>
+}
+
+
+<div id="banner">
+    <h3 style="position: absolute;top: 160px;left:70px;font-family: 'Trocchi, serif';color: #7c795d">
+        ĐẾN
+        BUMBA<br><br>
+        UỐNG TRÀ SỮA THẢ GA
+    </h3>
+    <img style="width: 100%;height: 250px;" src="~/TemplateTraSua/Resource/1575885206-banner-san-pham.jpg">
+</div>
+
+<main style="height:500px">
+    <div class="container">
+        @{
+            var result = @ViewBag.TraSuaDetail as MilkTea_CNWeb.Models.SanPham;
+
+            <div id="TraSuaimg" class="column">
+                <img src="@result.Linkanh" />
+            </div>
+        }
+        <div id="OrderInfo" class="column">
+
+            @{
+
+                <form method="post" action="/Cart/ThemSanPham/@result.MaSanPham">
+                    <div id="TraSuaMenu">
+
+                        <label style="font-size: 40px;font-style: italic;">@result.TenSanPham</label>
+                        <ul>
+                            <li>
+                                <label style="color: black;font-size: 20px;">Chọn size:&nbsp</label>
+                                <select name="tenSize" id="selectSize">
+                                    @foreach (var item in ViewBag.ListSize)
+                                    {
+                                        <option>@item.TenSize</option>
+                                    }
+                                </select>
+                            </li>
+                            <li>
+                                <label style="color: black;font-size: 20px">Chọn Topping:&nbsp</label>
+                                <select name="topping" style="margin-left:10px; margin-top:10px;">
+
+                                    @foreach (var item in ViewData["ListTopping"] as List<MilkTea_CNWeb.Models.Topping>)
+                                    {
+                                        <option>@item.Ten</option>
+                                    }
+                                </select>
+                            </li>
+                            <li>
+                                <label style="color: black;font-size: 20px">Số lượng:&nbsp</label>
+                                <input name="soluong" id="selectSoLuong" type="number" min="1" max="10" value="1">
+                            </li>
+
+                        </ul>
+                        <br><button id="btnMuaNgay" style="width: 80px;height: 50px;" type="submit">MUA NGAY</button>
+                    </div>
+                </form>
+            }
+
+
+        </div>
+    </div>
+   
+</main>
+

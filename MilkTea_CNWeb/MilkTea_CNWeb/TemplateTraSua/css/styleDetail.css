@@ -1,0 +1,72 @@
+
+li {
+    list-style-type: none;
+}
+
+#banner {
+    margin-top: 80px;
+    width: 100%;
+}
+
+#TraSuaMenu > ul > li {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#TraSuaimg > img {
+    border: 1px green solid;
+    box-shadow: 0 0 30px #CCFF00;
+    width: 450px;
+    height: 450px;
+}
+#TraSuaMenu{
+    height:500px;
+}
+
+.column {
+    display: inline-table;
+    margin-left: 100px;
+}
+
+#TraSuaimg {
+    width: 40%;
+    float: left;
+}
+
+#OrderInfo {
+    margin-top: 50px;
+    width: 40%;
+    float: left;
+}
+
+.container {
+    overflow: auto;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+#btnMuaNgay {
+    background-color: orange;
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: all 200ms ease-in-out;
+    margin-top:50px;
+    margin-left:90px;
+}
+
+#btnMuaNgay:hover {
+        transform: scale(1.3);
+        transition: all 200ms ease-in;
+}
+
+select {
+    border: solid 1px #18f2ce ;
+    border-radius: 10px;
+    font-size:20px;
+}
+input {
+    border: solid 1px #18f2ce;
+    border-radius: 10px;
+}
+
+

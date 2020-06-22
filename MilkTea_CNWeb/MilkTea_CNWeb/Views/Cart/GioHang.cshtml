@@ -1,0 +1,124 @@
+﻿@using MilkTea_CNWeb.Models
+@{
+    ViewBag.Title = "GioHang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model List<CartItem>
+
+@section scripts{
+    <script src="~/TemplateTraSua/js/jqueryCart.js"></script>
+    <script src="~/Scripts/ControllerJs/ControllerCart.js"></script>
+
+
+
+}
+
+@section css{
+
+    <link href="~/TemplateTraSua/css/Cart.css" rel="stylesheet" />
+    <style>
+        .setColorTitle {
+            font-weight: bold;
+            color: black;
+        }
+
+        .setColor {
+            font-family: sans-serif;
+            color: black;
+            font-style: italic;
+        }
+    </style>
+    <style>
+        .sizeColor {
+            width: 50px;
+            font-family: sans-serif;
+        }
+    </style>
+    <style>
+        .toppingColor {
+            font-family: sans-serif;
+        }
+    </style>
+    <style>
+
+        ._label {
+            font-weight: bold;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .title {
+            background-image: linear-gradient(#ee9ca7,#ffdde1);
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        .product {
+            overflow: hidden;
+        }
+    </style>
+
+
+}
+
+
+
+
+
+<main style="margin-top: 100px;">
+    <header>
+        <h2 id="QuanityCart" style="margin-left: 100px;">GIỎ HÀNG (@ViewBag.QuanityCart Sản phẩm)</h2>
+    </header>
+    <div class="container">
+
+        <form action="">
+            <div class="list-products">
+
+                <ul id="GetListCart">
+                    <li>
+                        <div class="row">
+                            <div class="col">
+
+                            </div>
+                            <div class="product">
+                                <div class="col">
+                                    <label class="setColorTitle">Tên Trà</label>
+                                </div>
+                                <div class="col">
+                                    <label class="setColorTitle">Giá</label>
+                                </div>
+                                <div class="col">
+                                    <label class="setColorTitle">Topping</label>
+                                </div>
+                                <div class="col">
+                                    <label class="setColorTitle">Số lượng</label>
+                                </div>
+                                <div class="col">
+                                    <label class="setColorTitle">Size</label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+             
+            </ul>
+
+
+</div>
+            <div class="Total">
+                <label style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Tổng Tiền</label>
+                <input value="@ViewBag.TongTien" type="text" disabled id="TongTien" >
+                <label style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Mã Giảm Giá</label>
+                <input type="text" style="margin-left:70px">
+            </div>
+            <a id="btnDatHang" href="/Cart/ThongTinKH" type="submit"><div id="lblDatHang">ĐẶT HÀNG</div></a>
+        </form>
+    </div>
+  
+    
+</main>
+
+
+
+

@@ -1,0 +1,23 @@
+﻿@using MilkTea_CNWeb.Models
+@model SanPham
+
+    <form action="/Admin/AdminHome/ThemTraSua">
+
+
+        <label for="tk">Tên Trà</label>
+        <input type="text" id="tk" name="TenSanPham">
+
+        <label for="mk">Mã Trà</label>
+        <input type="text" id="mk" name="MaSanPham">
+
+        <label for="ten">Giá</label>
+        <input type="text" id="ten" name="Gia">
+
+        <label for="dc">Link ảnh</label>
+        <input type="file" id="dc" name="Linkanh" accept="image/*">
+        <button id="btnXacNhan" type="submit">Xác Nhận</button>
+
+
+    </form>
+
+

@@ -1,0 +1,15 @@
+﻿@using MilkTea_CNWeb.Models
+@model Cart
+<a id="userIcon"><i class="fas fa-user"></i></a>
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a class="NotiQuanity" href="/Cart/GioHang">
+    <i class="fas fa-shopping-cart"></i>&nbsp;(@{
+        var cart = (Cart)Session[MilkTea_CNWeb.Controllers.CartController.strCart];
+        if (cart != null)
+        {
+            @Model.QuanityCart();
+        }
+
+    })
+</a>

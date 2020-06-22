@@ -1,0 +1,73 @@
+﻿@using MilkTea_CNWeb.Models
+@model List<SanPham>
+@{
+    ViewBag.Title = "ShopAllforVIP";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section scripts{
+    <script src="~/TemplateTraSua/js/jqueryShopAll.js"></script>
+    
+}
+@section css{
+    <link href="~/TemplateTraSua/css/styleShopAll.css" rel="stylesheet" />
+}
+
+<div id="banner">
+    <h3 style="position: absolute;top: 160px;left:70px;font-family: 'Trocchi, serif';color: #7c795d">
+        ĐẾN
+        BUMBA<br><br>
+        UỐNG TRÀ SỮA THẢ GA
+    </h3>
+    <img style="width: 100%;height: 250px;" src="~/TemplateTraSua/Resource/1575885206-banner-san-pham.jpg">
+</div>
+
+<main role="main">
+    <h2 style="text-align:center;margin-top:50px">CỬA HÀNG ƯU ĐÃI</h2>
+    <div id="Products">
+
+        <aside id="FilterMenu">
+            <div id="Filterbtn">
+                <h2 style="font-size: 20px;">
+                    SẮP XẾP THEO &nbsp;&nbsp;&nbsp;
+                    <i class="fas fa-minus"></i>
+                </h2>
+            </div>
+            <div id="FilterOp">
+                <ul>
+                    <li>
+                        <a href="#">Giá</a> <br>
+                        <input type="range" min="1" max="100000" value="25000" class=".slider">
+                    </li>
+                    <li><a href="#">Top seller</a></li>
+                    <li><a href="#">Khuyến mãi</a></li>
+                </ul>
+            </div>
+        </aside>
+        <div id="list-Products">
+            <ul id="ListTraSua">
+                @{
+                    foreach (var item in Model)
+                    {
+                        <li>
+                            <div class="TraSua">
+
+                                <div class="TraSuaimg">
+                                    <a href="/Home/ShopDetail/@item.MaSanPham"><img class="AvaTraSua" src="@item.Linkanh" /></a>
+                                </div>
+                                <div class="TraSualbl">
+                                    <label> @item.TenSanPham </label>
+                                    <br><label> @item.Gia  VND</label>
+                                </div><br><a style="text-decoration: none;" class="ChiTiet" href="/Home/ShopDetail/@item.MaSanPham">CHI TIẾT</a>
+                            </div>
+                        </li>
+                            }
+                }
+
+            </ul>
+        </div>
+
+    </div>
+
+</main>
+

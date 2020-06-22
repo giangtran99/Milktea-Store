@@ -1,0 +1,76 @@
+﻿
+
+@{
+    ViewBag.Title = "ThongTinKH";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using MilkTea_CNWeb.Models
+@model KhachHang
+
+@section scripts{
+
+    
+<script src="~/Scripts/ControllerJs/ControllerNoti.js"></script>
+}
+
+@section css{
+    <link href="~/TemplateTraSua/css/styleFormKH.css" rel="stylesheet" />
+}
+<main style="margin-top: 100px;">
+    <div id="title">
+        <label>THÔNG TIN KHÁCH HÀNG ĐẶT ĐƠN HÀNG</label>
+    </div>
+
+    <div class="container">
+
+        @{
+            if (Model != null)
+            {
+
+                <form action="/Cart/ThanhToan">
+                    <label for="ten">Họ Và Tên</label>
+                    <input value="@Model.HoTen" type="text" id="ten" name="ten">
+
+                    <label for="dc">Địa chỉ</label>
+                    <input value="@Model.Diachi" type="text" id="dc" name="diachi">
+
+                    <label for="sdt">Số Điện Thoại</label>
+                    <input value="@Model.SDT" type="text" id="sdt" name="sdt">
+
+                    <label for="email">Email</label>
+                    <input value="@Model.Email" type="email" id="email" name="email">
+
+
+                    <button id="btnXacNhan" type="submit">Xác Nhận</button>
+                </form>
+                    }
+                    else
+                    {
+                    <label for="tk">Tài khoản</label>
+                    <input type="text" id="tk" name="tk">
+
+                    <label for="mk">Mật khẩu</label>
+                    <input type="password" id="mk" name="mk">
+
+                    <label for="ten">Họ Và Tên</label>
+                    <input aria-invalid="true" type="text" id="ten" name="ten">
+
+                    <label for="dc">Địa chỉ</label>
+                    <input type="text" id="dc" name="diachi">
+
+                    <label for="sdt">Số Điện Thoại</label>
+                    <input type="text" id="sdt" name="sdt">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+
+                    <button id="btnXacNhan" type="submit">Xác Nhận</button>
+                    }
+
+                    }
+
+
+                
+            </div>
+
+</main>

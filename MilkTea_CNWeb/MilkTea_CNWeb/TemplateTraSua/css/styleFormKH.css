@@ -1,0 +1,31 @@
+﻿.container {
+    border-radius: 5px;
+    background-color: #99fffa;
+    padding: 20px;
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+input[type=text]:not(.thisEmail), input[type=password], input[type=email], select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+#btnXacNhan {
+    width: 100px;
+    height: 30px;
+    background-image: linear-gradient(#0af2d3, #1ae884);
+    margin-top:30px
+}
+
+#title {
+    font-size: 30px;
+    text-align: center;
+
+}

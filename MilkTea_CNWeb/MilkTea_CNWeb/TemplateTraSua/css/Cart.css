@@ -1,0 +1,103 @@
+
+.container {
+    clear: both;
+    margin: auto;
+    width: 90%;
+    margin-top:50px;
+}
+
+
+.Total {
+    background-color: #ffffe6;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+    .Total > label {
+        margin-top: 20px;
+        margin-left: 55px;
+    }
+
+    .Total > *:not(label) {
+        margin-left: 54px;
+    }
+
+.list-products {
+    background-color: #ffffe6;
+    overflow: hidden;
+    clear: both;
+    padding: 20px;
+}
+
+
+
+.product > * {
+    float: left;
+    
+}
+
+.col {
+    float: left;
+    width: 15.00%;
+    padding: 10px;
+    height: 130px; /* Should be removed. Only for demonstration */
+    text-align: center;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+main {
+    overflow: hidden;
+}
+
+input {
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+#txtTopping {
+    background-color: #ffffe6;
+    font-style: italic;
+    border: solid #ffffe6;
+    color: black;
+    text-align: center;
+}
+
+#txtSize {
+    background-color: #ffffe6;
+    font-style: italic;
+}
+
+#btnDatHang {
+    background-image: linear-gradient(#e803fc, pink);
+    margin-top: 30px;
+    font-family: monospace;
+    border-radius: 5px;
+    float: right;
+    height: 40px;
+    width: 120px;
+    text-align: center;
+    
+}
+
+
+#btnDatHang:hover {
+        opacity: 0.7;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.Xoa {
+    margin-top: 10px;
+}
+#lblDatHang{
+    margin-top:10px
+}
