@@ -13,9 +13,17 @@
             var mk = $('#mk').val();
             var diachi = $('#dc').val();
             var ten = $('#ten').val();
+             
 
-
-            controller.Noti(tk,sdt,email,mk,diachi,ten);
+               
+                    if (ten === "" || dc === "" || sdt === "" || email === "" || tk === "" || mk === "") {
+                        alert("Chưa nhập đủ thông tin");
+                              
+                    }
+                    else { controller.Noti(tk, sdt, email, mk, diachi, ten); }
+              
+            
+          
         });
 
     },
